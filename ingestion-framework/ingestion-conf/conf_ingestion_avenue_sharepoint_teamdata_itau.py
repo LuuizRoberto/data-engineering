@@ -1,0 +1,120 @@
+config = {
+    "project_id": "avenue",
+    "service" : "sharepoint",
+    "type" : "csv",
+    "instance" : "teamdata",
+    "database" : "itau",
+    "sec" : {
+        "site_url"           : "https://avenuesec.sharepoint.com/sites/team-data/",
+        "sm_user_secret_id"  : "clientid-sharepoint-avenue-team-data",
+        "sm_pwd_secret_id"   : "secret-sharepoint-avenue-team-data",
+    },
+    "tables" : {
+        "vinculo_clientes_ion" :
+        {
+            "extract_mode" : "append",
+            "latest_snapshot_mode" : "full",
+            "primary_key" : None,
+            "endpoint" : "/sites/team-data/Documentos Compartilhados/DataLake/Itau/VinculoClientesIon/Clientes_Avenue_{date_int}.csv",
+            "ds_type" : "csv",
+			"filename_date_field"  : "date_int",
+			"filename_date_format" : "%Y%m%d",
+            "changed_date" : None,
+            "changed_range" : None,
+            "exclude_columns" : [
+            ],
+            "delimiter" : ";",
+            "has_header" : True,
+            "header" : [
+                {"field" : "ESCRITORIO", "type" : "STRING"},
+                {"field" : "ESPEC_NOME", "type" : "STRING"},
+                {"field" : "SERVICO", "type" : "STRING"},
+                {"field" : "ESPEC_EMAIL", "type" : "STRING"},
+                {"field" : "PERFIL_ACESSO", "type" : "STRING"},
+                {"field" : "CLIENTE_CPF_C_DAC", "type" : "STRING"}
+            ]
+        },
+        "vinculo_clientes_private" :
+        {
+            "extract_mode" : "append",
+            "latest_snapshot_mode" : "full",
+            "primary_key" : None,
+            "endpoint" : "/sites/team-data/Documentos Compartilhados/DataLake/Itau/VinculoClientesPrivate/Clientes_Private_{date_int}.csv",
+            "ds_type" : "csv",
+			"filename_date_field"  : "date_int",
+			"filename_date_format" : "%Y%m%d",
+            "changed_date" : None,
+            "changed_range" : None,
+            "exclude_columns" : [
+            ],
+            "delimiter" : ";",
+            "has_header" : True,
+            "header" : [
+                {"field" : "ESCRITORIO", "type" : "STRING"},
+                {"field" : "ESPEC_NOME", "type" : "STRING"},
+                {"field" : "SERVICO", "type" : "STRING"},
+                {"field" : "ESPEC_EMAIL", "type" : "STRING"},
+                {"field" : "PERFIL_ACESSO", "type" : "STRING"},
+                {"field" : "CLIENTE_CPF_C_DAC", "type" : "STRING"},
+                {"field" : "E-MAIL", "type" : "STRING"}
+            ]
+        },
+        "liberacao_acesso_extranet" :
+        {
+            "extract_mode" : "append",
+            "latest_snapshot_mode" : "full",
+            "primary_key" : None,
+            "endpoint" : "/sites/team-data/Documentos Compartilhados/DataLake/Itau/LiberacaoAcessoExtranet/liberacao_acesso_extranet_{date_int}.csv",
+            "ds_type" : "csv",
+			"filename_date_field"  : "date_int",
+			"filename_date_format" : "%Y%m%d",
+            "changed_date" : None,
+            "changed_range" : None,
+            "exclude_columns" : [
+            ],
+            "delimiter" : ";",
+            "has_header" : True,
+            "header" : [
+                {"field" : "ESCRITORIO", "type" : "STRING"},
+                {"field" : "SERVICO", "type" : "STRING"},
+                {"field" : "COLABORADOR_NOME", "type" : "STRING"},
+                {"field" : "COLABORADOR_PERFIL_ACESSO", "type" : "STRING"},
+                {"field" : "COLABORADOR_EMAIL", "type" : "STRING"},
+                {"field" : "TELEFONE", "type" : "STRING"},
+                {"field" : "SUPT_RACF", "type" : "STRING"},
+                {"field" : "SUPT", "type" : "STRING"},
+                {"field" : "RACF_MATERNIDADE", "type" : "STRING"},
+                {"field" : "PRORROGA_ONBOAD", "type" : "STRING"},
+                {"field" : "PRACA", "type" : "STRING"},
+                {"field" : "PERIODO_ONBOARDING", "type" : "STRING"},
+                {"field" : "ORIGEM", "type" : "STRING"},
+                {"field" : "MES", "type" : "STRING"},
+                {"field" : "MARC_VOLANTE", "type" : "STRING"},
+                {"field" : "MARC_MOCHILA", "type" : "STRING"},
+                {"field" : "INICIO_MOCHILA", "type" : "STRING"},
+                {"field" : "GERENCIA_RACF", "type" : "STRING"},
+                {"field" : "GERENCIA", "type" : "STRING"},
+                {"field" : "FUNCIONAL_SUPT", "type" : "STRING"},
+                {"field" : "FUNC_LIDER", "type" : "STRING"},
+                {"field" : "FUNC_COORDENADOR", "type" : "STRING"},
+                {"field" : "FIM_MOCHILA", "type" : "STRING"},
+                {"field" : "ESPECIALISTA_MATERNIDADE", "type" : "STRING"},
+                {"field" : "DT_FIM_ONBOARD", "type" : "STRING"},
+                {"field" : "DATA_REFERENCIA", "type" : "STRING"},
+                {"field" : "DATA_INICIO", "type" : "STRING"},
+                {"field" : "DATA_INI_ONBOARD", "type" : "STRING"},
+                {"field" : "DATA_FIM", "type" : "STRING"},
+                {"field" : "COORD_RACF", "type" : "STRING"},
+                {"field" : "COD_CARTEIRA_GQ", "type" : "STRING"},
+                {"field" : "CELULAR", "type" : "STRING"},
+                {"field" : "CARTEIRA_GQ", "type" : "STRING"},
+                {"field" : "CART_MIGRADA", "type" : "STRING"},
+                {"field" : "CART_ANTIGA_MIGRAC", "type" : "STRING"},
+                {"field" : "ANOMES_INI_ONBOARD", "type" : "STRING"},
+                {"field" : "ANOMES_FIM_ONBOARD", "type" : "STRING"},
+                {"field" : "ANOMES", "type" : "STRING"},
+                {"field" : "STATUS_ACESSSO", "type" : "STRING"}
+            ]
+        },
+    }
+}
